@@ -9,17 +9,11 @@ from abc import ABC, abstractmethod
 # The element at the corresponding position to the animal will be 1 and the rest will be 0
 
 class DataLabel:  # This class will store a pair of 1 image and its label
-    def __init__(self, image_data, image_label):
-        # TODO
-        self.image_data = image_data
-        self.image_label = image_label
+   
 
 
 class Batch:  # This class will store multiple images
-    def __init__(self, batch_data, batch_labels):
-        # TODO
-        self.batch_data = batch_data
-        self.batch_labels = batch_labels
+    
 
 
 class Dataset(ABC):
@@ -43,16 +37,11 @@ class TensorDataset(Dataset):
         # TODO: need to initialize the attributes:
         #   * 1. data, label;
         #   * 2. data_shape, label_shape
-        self.dataset = dataset
-        self.labels = labels
+       
 
     def length(self):
         # TODO: return the size of the first dimension (dimension 0)
-        return self.dataset.shape[0]
 
     def getimage(self, index) -> DataLabel:  # This is the getitem method in the major assignment 1
         # TODO: return the data item (of type: DataLabel) that is specified by index
-        if index < 0 or index > self.length():
-            raise IndexError("Invalid index!")
-
-        return DataLabel(self.dataset[index], self.labels[index])
+        
