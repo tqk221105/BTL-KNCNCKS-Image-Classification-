@@ -1,1 +1,0 @@
-# BTL---KNCNCKS-Image-Classification-
