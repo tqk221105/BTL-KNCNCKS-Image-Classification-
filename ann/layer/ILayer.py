@@ -14,9 +14,7 @@ from abc import ABC, abstractmethod
 
 class ILayer:
     def __init__(self):
-        self.input = None
-        self.output = None
-
+        
     @abstractmethod
     def forward(self, X):
         pass
