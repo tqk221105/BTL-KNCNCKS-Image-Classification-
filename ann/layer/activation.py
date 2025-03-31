@@ -24,15 +24,11 @@ class Activation(ILayer):
     def __init__(self, activation, activation_derivative):
         # TODO
         # activation and activation_derivative are the functions of the Activation layer
-        super().__init__()
-        self.activation = activation
-        self. activation_derivative = activation_derivative
+        
 
     def forward(self, input):
         # TODO: return the result of the activation function
-        self.input = input
-        self.output = self.activation(self.input)
-        return self.output
+       
 
     def backward(self, output_gradient, learning_rate):
                         # dE/dY*(j x 1)
@@ -44,4 +40,4 @@ class Activation(ILayer):
                                 = dE/y*1 . f'(y_1)
         therefore, dE/dY = dE/dY* ⊙ f'(Y)
         """
-        return np.multiply(output_gradient, self.activation_derivative(self.input))
+        
