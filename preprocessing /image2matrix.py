@@ -13,15 +13,10 @@ from PIL import Image
 
 
 def img2matr(file_path: str, img_size=(64, 64)):
-    image = Image.open(file_path)  # Open the image
-    image = image.convert("RGB")  # Convert the image to RGB
-    image = image.resize(img_size)
+                                   # Open the image
+                                   # Convert the image to RGB
 
-    matrix = np.array(image)  # Convert the image into matrix (height, width, channels)
+                # Convert the image into matrix (height, width, channels)
 
     # Convert to (channels, height, width) to pass to Convolutional layer
-    input_image = np.transpose(matrix, (2, 0, 1))
-    input_image = input_image.astype(np.float32)  # Convert the data type from uint8 to float32 to use for division
-    input_image /= 255.0
-
-    return input_image
+                    # Convert the data type from uint8 to float32 to use for division
